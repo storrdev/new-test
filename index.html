@@ -15,8 +15,17 @@
         height: 100%;
       }
     </style>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
   </head>
   <body>
-    <iframe src="https://meatspin.fr"></iframe>
+    <div id="this"></div>
+    <script>
+      jQuery.get('https://meatspin.fr', (data) => {
+        jQuery('#this').html(data);
+      })
+    </script>
   </body>
 </html>
